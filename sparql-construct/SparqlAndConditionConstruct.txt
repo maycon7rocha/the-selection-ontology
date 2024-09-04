@@ -1,0 +1,27 @@
+PREFIX selection: <http://www.example.com/schemas/selection#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+CONSTRUCT
+{
+    ?condition selection:class ?class .
+    ?class a owl:Class ;
+             owl:equivalentClass
+             [
+                a owl:Class ;
+                owl:intersectionOf (?childConditionClasses)
+    		 ] .
+}    
+WHERE 
+{ 
+	?condition a selection:AndCondition .
+    BIND(URI(CONCAT(STR(?condition),"Class")) AS ?class)
+    {
+        SELECT ?condition (group_concat(?childConditionClass) as ?childConditionClasses)
+        WHERE 
+        {
+          ?condition selection:condition ?childCondition .
+            BIND(CONCAT("<",STR(?childCondition),"Class>") AS ?childConditionClass)
+        }
+        GROUP BY ?condition
+    }
+    
+}
