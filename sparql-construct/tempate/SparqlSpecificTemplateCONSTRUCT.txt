@@ -31,6 +31,5 @@ where
     BIND(IF(BOUND(?yyy),
     "String com o código de uma classe OWL, em sintaxe Turtle Pretty Printing, geralmente uma owl:Restriction usando CONCAT(...) e STR(?xxx)" , 
     "Classe OWL, geralmente ou owl:Thing, quando a classe for usada em owl:intersectionOf, ou owl:Nothing, quando a classe for usada em owl:unionOf") AS ?nomeDaClasseYYY) 
-    ***/
-      
+    ***/  
 }

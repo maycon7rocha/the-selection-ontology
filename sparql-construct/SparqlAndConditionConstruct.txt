@@ -22,6 +22,5 @@ WHERE
             BIND(CONCAT("<",STR(?childCondition),"Class>") AS ?childConditionClass)
         }
         GROUP BY ?condition
-    }
-    
+    }  
 }

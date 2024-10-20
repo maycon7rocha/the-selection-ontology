@@ -16,6 +16,5 @@ WHERE
     BIND(URI(CONCAT(STR(?condition),"Class")) AS ?class)
     
     ?condition selection:condition ?childCondition .
-    BIND(URI(CONCAT(STR(?childCondition),"Class")) AS ?childConditionClass) 
-    
+    BIND(URI(CONCAT(STR(?childCondition),"Class")) AS ?childConditionClass)  
 }
