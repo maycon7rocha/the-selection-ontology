@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.example.com/schemas/recruitment/example"
-     xml:base="http://www.example.com/schemas/recruitment/example"
+<rdf:RDF xmlns="http://www.iff.edu.br/schemas/recruitment/example"
+     xml:base="http://www.iff.edu.br/schemas/recruitment/example"
      xmlns:cv="http://rdfs.org/resume-rdf/cv.rdfs#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
@@ -13,9 +13,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:system="http://protege.stanford.edu/system#"
      xmlns:data-view="http://www.w3.org/2003/g/data-view#"
-     xmlns:selection="http://www.example.com/schemas/selection#"
-     xmlns:recruitment="http://www.example.com/schemas/recruitment#">
-    <owl:Ontology rdf:about="http://www.example.com/schemas/recruitment/example"/>
+     xmlns:selection="http://www.iff.edu.br/schemas/selection#"
+     xmlns:recruitment="http://www.iff.edu.br/schemas/recruitment#">
+    <owl:Ontology rdf:about="http://www.iff.edu.br/schemas/recruitment/example"/>
     
 
 
@@ -29,264 +29,264 @@
 
     
 
-    <!-- http://www.example.com/schemas/recruitment/example#Google -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#Google -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#Google">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#Google">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#Company"/>
         <cv:Name>Google</cv:Name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogle -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogle -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogle">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#JobPosting"/>
-        <recruitment:jobPostingCompany rdf:resource="http://www.example.com/schemas/recruitment/example#Google"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogle">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPosting"/>
+        <recruitment:jobPostingCompany rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#Google"/>
         <recruitment:jobPostingType rdf:resource="http://rdfs.org/resume-rdf/base.rdfs#Full-time"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition"/>
-        <selection:desire rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire"/>
-        <selection:desire rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition"/>
+        <selection:desire rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire"/>
+        <selection:desire rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire"/>
         <recruitment:jobPostingTitle>Vaga Programador OO no Google</recruitment:jobPostingTitle>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#SkillCondition"/>
-        <recruitment:requestedSkillType rdf:resource="http://www.example.com/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
+        <recruitment:requestedSkillType rdf:resource="http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill"/>
         <recruitment:requestedYearsExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</recruitment:requestedYearsExperience>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/selection#AndCondition"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/selection#AndCondition"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleAgileProcessCondition"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire">
-        <rdf:type rdf:resource="http://www.example.com/schemas/selection#Desire"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesire">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/selection#Desire"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition"/>
         <selection:importanceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</selection:importanceLevel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#SkillCondition"/>
-        <recruitment:requestedSkillType rdf:resource="http://www.example.com/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleMobileDevDesireCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
+        <recruitment:requestedSkillType rdf:resource="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/selection#OrCondition"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/selection#OrCondition"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#SkillCondition"/>
-        <recruitment:requestedSkillType rdf:resource="http://www.example.com/schemas/recruitment#JavaSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionJavaCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
+        <recruitment:requestedSkillType rdf:resource="http://www.iff.edu.br/schemas/recruitment#JavaSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#SkillCondition"/>
-        <recruitment:requestedSkillType rdf:resource="http://www.example.com/schemas/recruitment#PythonSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleProgLangConditionPythonCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
+        <recruitment:requestedSkillType rdf:resource="http://www.iff.edu.br/schemas/recruitment#PythonSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire">
-        <rdf:type rdf:resource="http://www.example.com/schemas/selection#Desire"/>
-        <selection:condition rdf:resource="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesire">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/selection#Desire"/>
+        <selection:condition rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition"/>
         <selection:importanceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</selection:importanceLevel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#SkillCondition"/>
-        <recruitment:requestedSkillType rdf:resource="http://www.example.com/schemas/recruitment#WebDevelopmentFrameworkSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#VagaProgramadorOONoGoogleWebDevDesireCondition">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
+        <recruitment:requestedSkillType rdf:resource="http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#joao -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#joao -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#joao">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#joao">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#Person"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#joao_ExtremeProgrammingSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#joao_ExtremeProgrammingSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#joao_ExtremeProgrammingSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#ExtremeProgrammingSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#joao_ExtremeProgrammingSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#ExtremeProgrammingSkill"/>
         <cv:skillYearsExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</cv:skillYearsExperience>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#joao_PythonSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#joao_PythonSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#joao_PythonSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#PythonSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#joao_PythonSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#PythonSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#joao_ReactSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#joao_ReactSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#joao_ReactSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#ReactSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#joao_ReactSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#ReactSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#joao_cv -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#joao_cv -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#joao_cv">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#joao_cv">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#CV"/>
-        <cv:aboutPerson rdf:resource="http://www.example.com/schemas/recruitment/example#joao"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#joao_ExtremeProgrammingSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#joao_PythonSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#joao_ReactSkill"/>
+        <cv:aboutPerson rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#joao"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#joao_ExtremeProgrammingSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#joao_PythonSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#joao_ReactSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#Person"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose_JavaSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose_JavaSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose_JavaSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#JavaSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose_JavaSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#JavaSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose_MobileDevSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose_MobileDevSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose_MobileDevSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose_MobileDevSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose_PythonSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose_PythonSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose_PythonSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#PythonSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose_PythonSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#PythonSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose_ReactSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose_ReactSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose_ReactSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#ReactSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose_ReactSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#ReactSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#jose_cv -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#jose_cv -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#jose_cv">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#jose_cv">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#CV"/>
-        <cv:aboutPerson rdf:resource="http://www.example.com/schemas/recruitment/example#jose"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#jose_JavaSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#jose_MobileDevSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#jose_PythonSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#jose_ReactSkill"/>
+        <cv:aboutPerson rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#jose"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#jose_JavaSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#jose_MobileDevSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#jose_PythonSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#jose_ReactSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#Person"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria_AngularSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria_AngularSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria_AngularSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#AngularSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria_AngularSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#AngularSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria_JavaSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria_JavaSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria_JavaSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#JavaSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria_JavaSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#JavaSkill"/>
         <cv:skillYearsExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cv:skillYearsExperience>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria_ScrumSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria_ScrumSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria_ScrumSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#ScrumSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria_ScrumSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#ScrumSkill"/>
         <cv:skillYearsExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</cv:skillYearsExperience>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria_XamarinSkill -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria_XamarinSkill -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria_XamarinSkill">
-        <rdf:type rdf:resource="http://www.example.com/schemas/recruitment#XamarinSkill"/>
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria_XamarinSkill">
+        <rdf:type rdf:resource="http://www.iff.edu.br/schemas/recruitment#XamarinSkill"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.com/schemas/recruitment/example#maria_cv -->
+    <!-- http://www.iff.edu.br/schemas/recruitment/example#maria_cv -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/schemas/recruitment/example#maria_cv">
+    <owl:NamedIndividual rdf:about="http://www.iff.edu.br/schemas/recruitment/example#maria_cv">
         <rdf:type rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#CV"/>
-        <cv:aboutPerson rdf:resource="http://www.example.com/schemas/recruitment/example#maria"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#maria_AngularSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#maria_JavaSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#maria_ScrumSkill"/>
-        <cv:hasSkill rdf:resource="http://www.example.com/schemas/recruitment/example#maria_XamarinSkill"/>
+        <cv:aboutPerson rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#maria"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#maria_AngularSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#maria_JavaSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#maria_ScrumSkill"/>
+        <cv:hasSkill rdf:resource="http://www.iff.edu.br/schemas/recruitment/example#maria_XamarinSkill"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

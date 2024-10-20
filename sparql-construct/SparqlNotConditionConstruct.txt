@@ -1,4 +1,4 @@
-PREFIX selection: <http://www.example.com/schemas/selection#>
+PREFIX selection: <http://www.iff.edu.br/schemas/selection#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 CONSTRUCT
 {
