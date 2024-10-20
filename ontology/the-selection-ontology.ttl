@@ -1,0 +1,113 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix selection: <http://www.iff.edu.br/schemas/selection#> .
+
+selection: a owl:Ontology .
+selection:class
+  a owl:ObjectProperty ;
+  rdfs:range rdfs:Class .
+
+selection:condition
+  a owl:ObjectProperty, owl:InverseFunctionalProperty ;
+  rdfs:range selection:Condition .
+
+selection:criteriaClass
+  a owl:ObjectProperty ;
+  rdfs:domain selection:Conditional ;
+  rdfs:range rdfs:Class ;
+  owl:propertyChainAxiom (
+   selection:condition
+   selection:class
+ ) .
+
+selection:desire
+  a owl:ObjectProperty, owl:InverseFunctionalProperty ;
+  rdfs:domain selection:Selection ;
+  rdfs:range selection:Desire .
+
+selection:importanceLevel
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain selection:Desire ;
+  rdfs:range xsd:nonNegativeInteger .
+
+selection:AndCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:BinaryCompoundCondition ;
+  owl:disjointWith selection:OrCondition .
+
+selection:BinaryCompoundCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:CompoundCondition, [
+    a owl:Restriction ;
+    owl:onProperty selection:condition ;
+    owl:minCardinality "2"^^xsd:nonNegativeInteger
+  ] ;
+  owl:disjointWith selection:UnaryCompoundCondition .
+
+selection:CompoundCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:Condition, [
+    a owl:Restriction ;
+    owl:onProperty selection:condition ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith selection:SimpleCondition .
+
+selection:Condition
+  a owl:Class ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:unionOf (
+     selection:CompoundCondition
+     selection:SimpleCondition
+   )
+  ] ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty selection:class ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+selection:Conditional
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty selection:condition ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+selection:Desire
+  a owl:Class ;
+  rdfs:subClassOf selection:Conditional, [
+    a owl:Restriction ;
+    owl:onProperty selection:importanceLevel ;
+    owl:someValuesFrom xsd:integer
+  ] ;
+  owl:disjointWith selection:Selection .
+
+selection:NotCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:UnaryCompoundCondition .
+
+selection:OrCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:BinaryCompoundCondition .
+
+selection:Selection
+  a owl:Class ;
+  rdfs:subClassOf selection:Conditional .
+
+selection:SimpleCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:Condition .
+
+selection:UnaryCompoundCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:CompoundCondition, [
+    a owl:Restriction ;
+    owl:onProperty selection:condition ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+rdfs:Class a owl:Class .

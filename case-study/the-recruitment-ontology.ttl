@@ -1,0 +1,196 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix recruitment: <http://www.iff.edu.br/schemas/recruitment#> .
+@prefix cv: <http://rdfs.org/resume-rdf/cv.rdfs#> .
+@prefix cv_base: <http://rdfs.org/resume-rdf/cv.rdfs#> .
+@prefix selection: <http://www.iff.edu.br/schemas/selection#> .
+
+<http://www.iff.edu.br/schemas/recruitment> a owl:Ontology .
+<http://protege.stanford.edu/system#range> a owl:AnnotationProperty .
+recruitment:jobPostingCompany
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:JobPosting ;
+  rdfs:range cv:Company .
+
+recruitment:jobPostingFunction
+  a owl:ObjectProperty ;
+  rdfs:domain recruitment:JobPosting ;
+  rdfs:range recruitment:JobFunction .
+
+recruitment:jobPostingType
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:JobPosting ;
+  rdfs:range cv_base:CVJobMode .
+
+recruitment:requestedDegree
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:SkillCondition ;
+  rdfs:range cv_base:EduDegree .
+
+recruitment:requestedSkillType
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:SkillCondition ;
+  rdfs:range [
+    a owl:Restriction ;
+    owl:onProperty rdfs:subClassOf ;
+    owl:hasValue cv:Skill
+  ] .
+
+rdfs:subClassOf a owl:ObjectProperty .
+recruitment:requestedSkillLevel
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:SkillCondition ;
+  rdfs:range xsd:nonNegativeInteger ;
+  rdfs:comment "Level of the skill (0..5)" .
+
+recruitment:requestedYearsExperience
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain recruitment:SkillCondition ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cv_base:CVJobMode a owl:Class .
+cv_base:EduDegree a owl:Class .
+cv:Company
+  a owl:Class ;
+  rdfs:comment "A class for company information." ;
+  rdfs:label "Company" .
+
+cv:Person
+  a owl:Class ;
+  rdfs:subClassOf foaf:Person ;
+  rdfs:comment "CV subclass of WordNet person" ;
+  rdfs:label "Person" .
+
+cv:Skill a owl:Class, owl:NamedIndividual .
+<http://www.daml.org/2001/09/countries/countries.daml#> a owl:Class .
+recruitment:AgileSoftwareDevelopmentProcessSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:SoftwareDevelopmentProcessesSkill .
+
+recruitment:AngularSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:WebDevelopmentFrameworkSkill .
+
+recruitment:DatabaseDesignAndDevelopmentSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingAndDevelopmentSkill .
+
+recruitment:DegreeCondition
+  a owl:Class ;
+  rdfs:subClassOf recruitment:JobPostingCondition .
+
+recruitment:ExtremeProgrammingSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:AgileSoftwareDevelopmentProcessSkill .
+
+recruitment:InformationTechnologySkill
+  a owl:Class ;
+  rdfs:subClassOf cv:Skill .
+
+recruitment:JavaScriptSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingLanguageSkill .
+
+recruitment:JavaSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingLanguageSkill .
+
+recruitment:JobFunction a owl:Class .
+recruitment:JobPosting
+  a owl:Class ;
+  rdfs:subClassOf selection:Selection, [
+    a owl:Restriction ;
+    owl:onProperty recruitment:jobPostingCompany ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty recruitment:jobPostingFunction ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty recruitment:jobPostingType ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+recruitment:JobPostingCondition
+  a owl:Class ;
+  rdfs:subClassOf selection:SimpleCondition .
+
+recruitment:KanbanSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:AgileSoftwareDevelopmentProcessSkill .
+
+recruitment:KotlinSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:MobileAppDevelopmentFrameworkSkill .
+
+recruitment:MobileAppDevelopmentFrameworkSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingAndDevelopmentSkill .
+
+recruitment:NoSQLSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:DatabaseDesignAndDevelopmentSkill .
+
+recruitment:ProgrammingAndDevelopmentSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:InformationTechnologySkill .
+
+recruitment:ProgrammingLanguageSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingAndDevelopmentSkill .
+
+recruitment:PythonSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingLanguageSkill .
+
+recruitment:ReactSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:WebDevelopmentFrameworkSkill .
+
+recruitment:RubySkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingLanguageSkill .
+
+recruitment:SQLSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:DatabaseDesignAndDevelopmentSkill .
+
+recruitment:ScrumSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:AgileSoftwareDevelopmentProcessSkill .
+
+recruitment:SkillCondition
+  a owl:Class ;
+  rdfs:subClassOf recruitment:JobPostingCondition, [
+    a owl:Restriction ;
+    owl:onProperty recruitment:requestedSkillType ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+recruitment:SoftwareDevelopmentProcessesSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingAndDevelopmentSkill .
+
+recruitment:StudyField a owl:Class .
+recruitment:SwfitSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:MobileAppDevelopmentFrameworkSkill .
+
+recruitment:Vue.jsSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:WebDevelopmentFrameworkSkill .
+
+recruitment:WebDevelopmentFrameworkSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:ProgrammingAndDevelopmentSkill .
+
+recruitment:XamarinSkill
+  a owl:Class ;
+  rdfs:subClassOf recruitment:MobileAppDevelopmentFrameworkSkill .
+
+selection:Selection a owl:Class .
+selection:SimpleCondition a owl:Class .
+foaf:Person a owl:Class .

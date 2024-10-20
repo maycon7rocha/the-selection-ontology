@@ -15,28 +15,10 @@
      xmlns:data-view="http://www.w3.org/2003/g/data-view#">
     <owl:Ontology rdf:about="http://www.iff.edu.br/schemas/recruitment"/>
     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     <!-- http://protege.stanford.edu/system#range -->
-
     <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/system#range"/>
-    
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
+   
     <!-- http://www.iff.edu.br/schemas/recruitment#jobPostingCompany -->
-
     <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#jobPostingCompany">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPosting"/>
@@ -44,14 +26,12 @@
     </owl:ObjectProperty>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#jobPostingFunction -->
-
     <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#jobPostingFunction">
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPosting"/>
         <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobFunction"/>
     </owl:ObjectProperty>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#jobPostingType -->
-
     <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#jobPostingType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPosting"/>
@@ -59,7 +39,6 @@
     </owl:ObjectProperty>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#requestedDegree -->
-
     <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#requestedDegree">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
@@ -67,7 +46,6 @@
     </owl:ObjectProperty>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#requestedSkillType -->
-
     <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#requestedSkillType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
@@ -80,19 +58,9 @@
     </owl:ObjectProperty>
     
     <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
     <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     <!-- http://www.iff.edu.br/schemas/recruitment#requestedSkillLevel -->
-
     <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#requestedSkillLevel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
@@ -101,38 +69,25 @@
     </owl:DatatypeProperty>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#requestedYearsExperience -->
-
     <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/recruitment#requestedYearsExperience">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/recruitment#SkillCondition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     </owl:DatatypeProperty>
-    
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
+   
     <!-- http://rdfs.org/resume-rdf/base.rdfs#CVJobMode -->
-
     <owl:Class rdf:about="http://rdfs.org/resume-rdf/base.rdfs#CVJobMode"/>
     
     <!-- http://rdfs.org/resume-rdf/base.rdfs#EduDegree -->
-
     <owl:Class rdf:about="http://rdfs.org/resume-rdf/base.rdfs#EduDegree"/>
     
     <!-- http://rdfs.org/resume-rdf/cv.rdfs#Company -->
-
     <owl:Class rdf:about="http://rdfs.org/resume-rdf/cv.rdfs#Company">
         <rdfs:comment>A class for company information.</rdfs:comment>
         <rdfs:label>Company</rdfs:label>
     </owl:Class>
     
     <!-- http://rdfs.org/resume-rdf/cv.rdfs#Person -->
-
     <owl:Class rdf:about="http://rdfs.org/resume-rdf/cv.rdfs#Person">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment>CV subclass of WordNet person</rdfs:comment>
@@ -140,51 +95,42 @@
     </owl:Class>
     
     <!-- http://rdfs.org/resume-rdf/cv.rdfs#Skill -->
-
     <owl:Class rdf:about="http://rdfs.org/resume-rdf/cv.rdfs#Skill"/>
     
     <!-- http://www.daml.org/2001/09/countries/countries.daml# -->
-
     <owl:Class rdf:about="http://www.daml.org/2001/09/countries/countries.daml#"/>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#SoftwareDevelopmentProcessesSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#AngularSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#AngularSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#DatabaseDesignAndDevelopmentSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#DatabaseDesignAndDevelopmentSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#DegreeCondition -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#DegreeCondition">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPostingCondition"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#ExtremeProgrammingSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#ExtremeProgrammingSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#InformationTechnologySkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#InformationTechnologySkill">
         <rdfs:subClassOf rdf:resource="http://rdfs.org/resume-rdf/cv.rdfs#Skill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#JavaScriptSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#JavaScriptSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill"/>
     </owl:Class>
@@ -195,17 +141,14 @@
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#JavaSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#JavaSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#JobFunction -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#JobFunction"/>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#JobPosting -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#JobPosting">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/selection#Selection"/>
         <rdfs:subClassOf>
@@ -229,79 +172,66 @@
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#JobPostingCondition -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#JobPostingCondition">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/selection#SimpleCondition"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#KanbanSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#KanbanSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#KotlinSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#KotlinSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#NoSQLSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#NoSQLSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#DatabaseDesignAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#InformationTechnologySkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#PythonSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#PythonSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#ReactSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#ReactSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#RubySkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#RubySkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingLanguageSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#SQLSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#SQLSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#DatabaseDesignAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#ScrumSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#ScrumSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#AgileSoftwareDevelopmentProcessSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#SkillCondition -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#SkillCondition">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#JobPostingCondition"/>
         <rdfs:subClassOf>
@@ -313,60 +243,42 @@
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#SoftwareDevelopmentProcessesSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#SoftwareDevelopmentProcessesSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#StudyField -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#StudyField"/>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#SwfitSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#SwfitSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#Vue.jsSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#Vue.jsSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#WebDevelopmentFrameworkSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#ProgrammingAndDevelopmentSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/recruitment#XamarinSkill -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/recruitment#XamarinSkill">
         <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/recruitment#MobileAppDevelopmentFrameworkSkill"/>
     </owl:Class>
     
     <!-- http://www.iff.edu.br/schemas/selection#Selection -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/selection#Selection"/>
     
     <!-- http://www.iff.edu.br/schemas/selection#SimpleCondition -->
-
     <owl:Class rdf:about="http://www.iff.edu.br/schemas/selection#SimpleCondition"/>
     
     <!-- http://xmlns.com/foaf/0.1/Person -->
-
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
-    
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
+  
     <!-- http://rdfs.org/resume-rdf/cv.rdfs#Skill -->
-
     <owl:NamedIndividual rdf:about="http://rdfs.org/resume-rdf/cv.rdfs#Skill"/>
 </rdf:RDF>
